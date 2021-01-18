@@ -2,6 +2,7 @@
 using namespace std;
 #include<cmath>
 
+//Function for Floyd Triangle
 void floyd_triangle(int a){
   int i=1;
   for(int j=1; j<=a; j++){

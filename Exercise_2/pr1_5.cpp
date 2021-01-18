@@ -2,6 +2,7 @@
 using namespace std;
 #include <cmath>
 
+//Function for finding the n-th Fibonacci-number (Non-Recursive)
 void fibonacci(int n){
   int a=0;
   int b=1;

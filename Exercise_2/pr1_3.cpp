@@ -1,7 +1,9 @@
 #include <iostream>
 using namespace std;
 
+//Function for swapping variables
 void swap(int &v1,int &v2){
+  //Temporary new Variable
   int new_variable=v1;
   v1=v2;
   v2=new_variable;

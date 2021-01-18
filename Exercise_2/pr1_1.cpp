@@ -30,4 +30,4 @@ int point_within_circle(int x,int y,int r,int px,int py){
   if (d>=0)
     return true; 
   return false ;
-}d
+}

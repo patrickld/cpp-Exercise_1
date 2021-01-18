@@ -2,27 +2,31 @@
 using namespace std;
 #include<cmath>
 
-int main() {
-  //input of positions
-  int n=5;
-  //cin>>n;
-  
-  //input of parameters
-  double position = 0;
-  int x0=0,v=10,a=2;
-  double t=0.5;
-  //cin>>x0,v,a,t;
-  
-  //formula
-  position=x0+v*t+1/2*a*pow(t,2);
-  
-  return 0;
+//Function for finding the position of a moving body 
+void position_of_a_moving_body(){
+  int p,s,a;
+  cout<<"enter the initial position, the speed and the acceleration: " ;
+  cin>>p>>s>>a;
+  int positions;
+  cout<<"how many times you want to display the position of the moving body? ";
+  cin>>positions; 
+  double timing;
+  cout<<"how often (in seconds) you want to update the position of the moving object? ";
+  cin>>timing;
+  cout<<"–––––––––––––––––––––––"<<endl;
+  cout<<endl;
+  cout<<"Acceleration: "<<a<<" Initial speed: "<<s<<" Initial position: "<<p<<" Number of times: "<<positions <<" Dela t: "<<timing<<endl;
+
+  //Formula for iterating the position at various times
+  double time=0;
+  for(int i=0;i<positions;i++){
+    double p2=p+s*time+0.5*a*pow(time,2);
+    cout<<"At time "<<time<<" the position is "<<p2<<endl;
+    time+=timing;
+  }
 }
 
-/*The time evolution of a body that is horizontally moving in a mono-dimensional space with speed v, acceleration a and initial position x0 is governed by the following equation:
-x(t)=x0 +v·t+1/2a·t2
-Write a C++ function that displays the position of a body moving at fixed interval of time ∆t. The function should display n positions where n is given as input. The output should have the following format:
-enter the initial position, the speed and the acceleration: 0 10 2
-how many times you want to display the position of the moving body? 5
-how often (in seconds) you want to update the position of the moving object?  0.5
-*/
+int main(){
+  position_of_a_moving_body();
+  return 0;
+}

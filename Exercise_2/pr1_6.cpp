@@ -2,9 +2,10 @@
 using namespace std;
 #include <cmath>
 
-//counter for recursive calls
+//Counter for recursive calls
 int a=0; 
 
+//Function for finding the n-th Fibonacci-number
 int fibonacci(int n=0){
   a++;
   if(n==1)
