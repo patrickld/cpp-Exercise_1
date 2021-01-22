@@ -4,7 +4,7 @@ using namespace std;
 
 //Function for finding the position of a moving body 
 void position_of_a_moving_body(){
-  int p,s,a;
+  float p,s,a;
   cout<<"enter the initial position, the speed and the acceleration: " ;
   cin>>p>>s>>a;
   int positions;
@@ -19,10 +19,10 @@ void position_of_a_moving_body(){
 
   //Formula for iterating the position at various times
   double time=0;
-  for(int i=0;i<positions;i++){
+  for(int i=0;i<positions*timing;i+=timing){
     double p2=p+s*time+0.5*a*pow(time,2);
     cout<<"At time "<<time<<" the position is "<<p2<<endl;
-    time+=timing;
+  //  time+=timing;
   }
 }
 
