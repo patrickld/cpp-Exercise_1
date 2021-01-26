@@ -64,6 +64,7 @@ double * poli_sum(double * p1, int d1, double * p2, int d2, int & dr){
 //product of two polynomials (returns one polynomial)
 double * poli_prod(double * p1, int d1, double * p2, int d2, int & dr){
   double * prod_poli = new double[dr];
+  
 /*
 //If dr is not given: 
   int size = max(d1,d2); 
